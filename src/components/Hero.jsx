@@ -24,14 +24,43 @@ const Hero = () => {
       <div className="pointer-events-none absolute inset-x-0 top-0 h-56 bg-[radial-gradient(80%_60%_at_50%_0%,rgba(0,112,243,0.25),transparent)]" />
 
       <div className="relative z-10 mx-auto flex max-w-7xl flex-col items-start px-6 pt-32 pb-24 sm:px-8 lg:px-12">
-        <motion.h1
-          initial={{ opacity: 0, y: 20 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.6 }}
-          className="text-4xl font-extrabold tracking-tight text-white sm:text-6xl md:text-7xl"
-        >
-          Rishi Marrivada
-        </motion.h1>
+        {/* Name with media backdrop */}
+        <div className="relative inline-block">
+          {/* Media backdrop directly behind the name */}
+          <div className="pointer-events-none absolute -inset-x-4 -inset-y-2 overflow-hidden rounded-xl">
+            {!prefersReducedMotion ? (
+              <>
+                <video
+                  className="h-full w-full object-cover opacity-60"
+                  autoPlay
+                  muted
+                  loop
+                  playsInline
+                  poster="https://images.unsplash.com/photo-1517487881594-2787fef5ebf7?q=80&w=1887&auto=format&fit=crop"
+                >
+                  <source src="https://cdn.coverr.co/videos/coverr-sleek-car-driving-3271/1080p.mp4" type="video/mp4" />
+                </video>
+                <div className="absolute inset-0 bg-gradient-to-r from-[#0f0f0f]/30 to-[#0f0f0f]/30" />
+              </>
+            ) : (
+              <img
+                src="https://images.unsplash.com/photo-1517487881594-2787fef5ebf7?q=80&w=1887&auto=format&fit=crop"
+                alt="Automotive tech backdrop"
+                className="h-full w-full object-cover opacity-60"
+                loading="lazy"
+              />
+            )}
+          </div>
+
+          <motion.h1
+            initial={{ opacity: 0, y: 20 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.6 }}
+            className="relative z-10 px-4 py-2 text-4xl font-extrabold tracking-tight text-white sm:text-6xl md:text-7xl"
+          >
+            Rishi Marrivada
+          </motion.h1>
+        </div>
 
         <motion.p
           initial={{ opacity: 0, y: 20 }}
