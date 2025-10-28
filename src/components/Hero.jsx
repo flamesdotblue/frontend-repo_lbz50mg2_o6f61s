@@ -7,11 +7,11 @@ const Hero = () => {
 
   return (
     <section id="home" className="relative min-h-[92vh] w-full overflow-hidden bg-[#0f0f0f] text-gray-200">
-      {/* Spline Background (animated) */}
+      {/* Spline Background (full-width cover) */}
       <div className="absolute inset-0">
         {!prefersReducedMotion ? (
           <Spline
-            scene="https://prod.spline.design/8fw9Z-c-rqW3nWBN/scene.splinecode"
+            scene="https://prod.spline.design/4Tf9WOIaWs6LOezG/scene.splinecode"
             style={{ width: '100%', height: '100%' }}
           />
         ) : (
@@ -24,7 +24,7 @@ const Hero = () => {
       <div className="pointer-events-none absolute inset-x-0 top-0 h-56 bg-[radial-gradient(80%_60%_at_50%_0%,rgba(0,112,243,0.25),transparent)]" />
 
       <div className="relative z-10 mx-auto flex max-w-7xl flex-col items-start px-6 pt-32 pb-24 sm:px-8 lg:px-12">
-        {/* Name with media backdrop */}
+        {/* Name with F1 + AI media backdrop */}
         <div className="relative inline-block">
           {/* Media backdrop directly behind the name */}
           <div className="pointer-events-none absolute -inset-x-4 -inset-y-2 overflow-hidden rounded-xl">
@@ -36,16 +36,36 @@ const Hero = () => {
                   muted
                   loop
                   playsInline
-                  poster="https://images.unsplash.com/photo-1517487881594-2787fef5ebf7?q=80&w=1887&auto=format&fit=crop"
+                  poster="https://images.unsplash.com/photo-1516357231954-91487b459602?q=80&w=1920&auto=format&fit=crop"
                 >
+                  {/* Sleek motorsport clip; graceful if it fails due to poster + overlays */}
                   <source src="https://cdn.coverr.co/videos/coverr-sleek-car-driving-3271/1080p.mp4" type="video/mp4" />
                 </video>
+                {/* AI circuit overlay */}
+                <svg
+                  className="pointer-events-none absolute inset-0 opacity-35 mix-blend-overlay"
+                  xmlns="http://www.w3.org/2000/svg"
+                  viewBox="0 0 100 100"
+                  preserveAspectRatio="none"
+                >
+                  <defs>
+                    <pattern id="grid" width="10" height="10" patternUnits="userSpaceOnUse">
+                      <path d="M 10 0 L 0 0 0 10" fill="none" stroke="rgba(0,112,243,0.25)" strokeWidth="0.5" />
+                    </pattern>
+                    <linearGradient id="glow" x1="0" y1="0" x2="1" y2="1">
+                      <stop offset="0%" stopColor="rgba(0,112,243,0.6)" />
+                      <stop offset="100%" stopColor="rgba(0,112,243,0.0)" />
+                    </linearGradient>
+                  </defs>
+                  <rect width="100%" height="100%" fill="url(#grid)" />
+                  <rect width="100%" height="100%" fill="url(#glow)" />
+                </svg>
                 <div className="absolute inset-0 bg-gradient-to-r from-[#0f0f0f]/30 to-[#0f0f0f]/30" />
               </>
             ) : (
               <img
-                src="https://images.unsplash.com/photo-1517487881594-2787fef5ebf7?q=80&w=1887&auto=format&fit=crop"
-                alt="Automotive tech backdrop"
+                src="https://images.unsplash.com/photo-1516357231954-91487b459602?q=80&w=1920&auto=format&fit=crop"
+                alt="Formula 1 meets AI — sleek motorsport backdrop"
                 className="h-full w-full object-cover opacity-60"
                 loading="lazy"
               />
