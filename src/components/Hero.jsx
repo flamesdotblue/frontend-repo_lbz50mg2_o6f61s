@@ -11,7 +11,7 @@ const Hero = () => {
       <div className="absolute inset-0">
         {!prefersReducedMotion ? (
           <Spline
-            scene="https://prod.spline.design/EF7JOSsHLk16Tlw9/scene.splinecode"
+            scene="https://prod.spline.design/8fw9Z-c-rqW3nWBN/scene.splinecode"
             style={{ width: '100%', height: '100%' }}
           />
         ) : (
@@ -19,7 +19,7 @@ const Hero = () => {
         )}
       </div>
 
-      {/* Readability overlays & soft lighting */}
+      {/* Readability overlays & soft lighting (non-blocking) */}
       <div className="pointer-events-none absolute inset-0 bg-gradient-to-b from-[#0f0f0f]/50 via-[#0f0f0f]/55 to-[#0f0f0f]" />
       <div className="pointer-events-none absolute inset-x-0 top-0 h-56 bg-[radial-gradient(80%_60%_at_50%_0%,rgba(0,112,243,0.25),transparent)]" />
 
@@ -39,7 +39,7 @@ const Hero = () => {
           transition={{ duration: 0.8, delay: 0.1 }}
           className="mt-4 text-xl font-medium text-gray-300 sm:text-2xl"
         >
-          Software Developer | AI & Systems Enthusiast
+          Futuristic Software Developer • Tech × Cars × AI
         </motion.p>
 
         <motion.p
@@ -48,7 +48,7 @@ const Hero = () => {
           transition={{ duration: 0.9, delay: 0.2 }}
           className="mt-4 max-w-2xl text-base text-gray-300 sm:text-lg"
         >
-          Building efficient, scalable software & AI-driven solutions.
+          Building high‑performance software, intelligent systems, and automotive experiences powered by AI.
         </motion.p>
 
         <motion.div
@@ -63,6 +63,23 @@ const Hero = () => {
           >
             View My Work
           </a>
+        </motion.div>
+
+        {/* Quick theme badges */}
+        <motion.div
+          initial={{ opacity: 0, y: 12 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.8, delay: 0.45 }}
+          className="mt-6 flex flex-wrap gap-2"
+        >
+          {['AI Systems', 'Autonomous & Edge', 'Racing Tech', 'Full‑Stack'].map((chip) => (
+            <span
+              key={chip}
+              className="rounded-md border border-white/10 bg-white/5 px-3 py-1 text-xs text-gray-200"
+            >
+              {chip}
+            </span>
+          ))}
         </motion.div>
       </div>
     </section>

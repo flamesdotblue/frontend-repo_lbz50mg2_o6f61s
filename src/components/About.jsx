@@ -21,7 +21,7 @@ const About = () => {
           transition={{ duration: 0.6, delay: 0.1 }}
           className="mt-6 text-base leading-7 text-gray-300 sm:text-lg"
         >
-          I'm a software developer with a strong focus on building robust systems and AI-driven applications. My background spans computer science research, a hands-on SDE internship, and projects that blend web development with machine learning and systems engineering. I enjoy designing reliable services, optimizing performance, and bringing ideas to life with clean, maintainable code.
+          I'm a software developer focused on the intersection of technology, cars, and AI. I build robust systems, edge‑AI pipelines, and web experiences that bring intelligence to real‑world products. My background spans computer science research, an SDE internship, and projects blending machine learning with performance‑minded engineering.
         </motion.p>
       </div>
     </section>

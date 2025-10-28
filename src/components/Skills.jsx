@@ -12,6 +12,9 @@ const skills = [
   { icon: <Code2 className="h-5 w-5" />, label: 'React' },
   { icon: <Brain className="h-5 w-5" />, label: 'Machine Learning' },
   { icon: <Brain className="h-5 w-5" />, label: 'YOLO' },
+  { icon: <Cpu className="h-5 w-5" />, label: 'Edge Computing' },
+  { icon: <Brain className="h-5 w-5" />, label: 'Autonomous Systems' },
+  { icon: <Cpu className="h-5 w-5" />, label: 'ROS' },
 ];
 
 const Skills = () => {

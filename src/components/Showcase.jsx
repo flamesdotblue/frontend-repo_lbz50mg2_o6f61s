@@ -35,6 +35,7 @@ const projects = [
 const capabilities = [
   'Full‑stack systems',
   'Edge‑AI models',
+  'Autonomous & perception',
   'Data & analytics',
   'APIs & integrations',
   'Performance & reliability',
@@ -54,6 +55,7 @@ const Showcase = () => {
         >
           Projects
         </motion.h2>
+        <p className="mt-2 text-sm text-gray-400">Selected work across tech, cars, and AI.</p>
         <div className="mt-8 grid gap-6 sm:grid-cols-2 lg:grid-cols-3">
           {projects.map((p, idx) => (
             <motion.div
